@@ -8,3 +8,17 @@ before_install:
 
 script:
   - docker run -e CI=test caleboconnell/caleb-site npm run test
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "caleboconnell"
+  env: "Caleboconnell-env"
+  bucket_name: "elasticbeanstalk-us-east-1-013962559831"
+  bucket_path: "caleboconnell"
+  on:
+    branch: master
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: 
+  secure: "$SECRET_ACCESS_KEY"
