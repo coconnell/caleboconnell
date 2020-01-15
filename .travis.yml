@@ -14,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "caleboconnell"
-  env: "Caleboconnell-env"
+  env: "Caleboconnell-env-1"
   bucket_name: "elasticbeanstalk-us-east-1-013962559831"
   bucket_path: "caleboconnell"
   on:
